@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corn in the Bible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #faf7f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* 🔹 Top Banner */
+    .top-banner {
+      width: 100%;
+      overflow: hidden;
+    }
+    .top-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 🔹 Hero Slideshow */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      padding: 1rem;
+      width: 90%;
+      max-width: 700px;
+    }
+    .hero-box {
+      background: rgba(120,120,120,0.45); /* medium-light grey with soft transparency */
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35); 
+      color: #fff;
+    }
+    .hero-box h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .hero-box p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin: 0;
+    }
+
+    /* 🔹 Content Sections */
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #7a5200;
+      border-bottom: 2px solid #e6d8a3;
+      padding-bottom: 0.3rem;
+    }
+    .verse {
+      background: #fff6db;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .verse:hover {
+      background: #ffeebc;
+    }
+    .explanation {
+      display: none;
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #444;
+    }
+    #factBox {
+      background: #e8f8f5;
+      border-left: 5px solid #1abc9c;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* 🔹 Parallax Sections (with focal-point controls) */
+    .parallax {
+      position: relative;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      /* Focal point controls */
+      --px: 50%; /* horizontal focus: 0% left, 50% center, 100% right */
+      --py: 50%; /* vertical focus:   0% top,  50% center, 100% bottom */
+      --tint: 0.45; /* overlay darkness 0–1 */
+
+      background-position: var(--px) var(--py);
+
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .parallax::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,var(--tint));
+    }
+    .parallax-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 800px;
+    }
+.parallax-content h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem); /* larger headline */
+  margin-bottom: 1.2rem;
+  border: none;
+  color: #fff;
+}
+
+.parallax-content p {
+  font-size: clamp(1.2rem, 3vw, 1.8rem); /* larger paragraph text */
+  line-height: 1.6;
+}
+
+
+    /* 🔹 Footer */
+    footer {
+      background: #333;
+      color: #eee;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .parallax { background-attachment: scroll; --px: 50%; }
+    }
+
+
+
+
+a.button {
+  background:#7a5200; 
+  color:#fff; 
+  padding:0.8rem 1.5rem; 
+  border-radius:6px; 
+  text-decoration:none; 
+  font-weight:bold; 
+  display:inline-block; 
+  transition:background 0.3s;
+}
+a.button:hover {
+  background:#9b6d00; /* slightly lighter gold/brown */
+}
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- 🔹 Top Banner -->
+  <div class="top-banner">
+    <img src="images/corninthebiblebanner.jpg" alt="Corn in the Bible Banner">
+  </div>
+
+  <!-- 🔹 Hero Slideshow -->
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('images/slide1.jpg');"></div>
+    <div class="slide" style="background-image: url('images/slide2.jpg');"></div>
+    <div class="slide" style="background-image: url('images/slide3.jpg');"></div>
+    <div class="slide" style="background-image: url('images/slide4.jpg');"></div>
+
+    <div class="hero-text">
+      <div class="hero-box">
+        <h1 id="hero-title">Corn in the Bible</h1>
+        <p id="hero-caption">Discover the true meaning of "corn" in scripture — not maize, but grain: wheat, barley, and the staff of life.</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>🌾 Meaning & History</h2>
+    <p>In the King James Bible and other English old translations, "corn" means American corn or maize. 
+    The people, places and events of the Bible were in the Americas. NOT in the so called "Middle East" <p>This website (and books) is a TOTAL disruption  to the status quo and forced belief systems of the past 500 years. It will be a bumpy ride because many people experience a cognitive mental phenomenon that prevents them from accepting facts or truths when those facts challenge their existing worldview or beliefs. </p><p>This is often explained by well-documented psychological processes such as cognitive dissonance (the discomfort when new information conflicts with one’s beliefs, Festinger 1957), confirmation bias (favoring information that supports pre-existing views while rejecting contradictory evidence), and belief perseverance (continuing to hold a belief even after it has been discredited). Together, these mechanisms show why individuals may resist truth and evidence, not because of the absence of logic or proof, but because their minds are protecting a consistent sense of reality. </p> …Not because they can’t understand the proof, but because their minds are trying to protect their familiar way of seeing the world.... even if it is shown to be 100% WRONG!<p>When you mention <strong>..."CORN IN THE BIBLE"...</strong> most everyone has never really thought about it even if they have been "reading" the Bible all of their lives.  Then, when they hear you mention the idea for the first time, they instantly become GOOGLE experts on the topic after a 5 minute search. Ha.</p><p>But...it don't work that way!!!</p><p>The REAL meaning of Corn In The Bible™ is so ancient, occult and esoteric that it is still one of the world's biggest secrets. As you journey and reason with us, you will see how many people are totally oblivious to critical thinking and will ignore the reality and confirmations as they are presented beyond the shadow of any doubt. </p><p>Truth is here!</p><p>We base all of our current and future knowledge on the topic of Corn In The Bible™ on the works, writings, and discoveries of one man: Mr. Horace Butler, author of When Rocks Cry Out. </p>
+    
+    
+    
+    
+    
+    
+    
+   <p><strong>ARE YOU READY?</strong></p>
+  </section>
+
+
+
+
+<div style="text-align:center; margin-top:1.5rem;">
+  <a href="letsgo.html" class="button">🚀 Let's Go!</a>
+</div>
+
+<p></p>
+
+
+
+  <!-- Parallax Section 1 -->
+  <div class="parallax" style="background-image:url('images/para1.jpg'); --px: 30%; --py: 50%;">
+    <div class="parallax-content">
+      <h2>“Seven Ears of Corn”</h2>
+      <p>Genesis 41:5 – And he slept and dreamed the second time: and, behold, seven ears of <strong>corn</strong> came up upon one stalk, rank and good..</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>📖 Key Scriptures</h2>
+    <div class="verse" onclick="toggleExplanation(this)">
+      Genesis 41:35 — Joseph stores up “corn” in Egypt.
+      <div class="explanation">The FIRST Egypt was in the Americas. Mexico was Lower Egypt. Peru was Upper Egypt. Corn is an exclusive American crop during ancient and biblical times.</div>
+    </div>
+    <div class="verse" onclick="toggleExplanation(this)">
+      Ruth 2:2 — Ruth goes to glean ears of “corn.”
+      <div class="explanation">Ears of corn makes sense. Gleaning ears of wheat is not a common saying since wheat ears are usually called heads or spikes.</div>
+    </div>
+    <div class="verse" onclick="toggleExplanation(this)">
+      2 Kings 4:42 — “And there came a man from Baalshalisha, and brought the man of God bread of the firstfruits, twenty loaves of barley, and full ears of corn in the husk thereof. And he said, Give unto the people, that they may eat.”
+      <div class="explanation">Full ears of corn in the HUSK! </div>
+    </div>
+  </section>
+
+<div style="text-align:center; margin-top:1.5rem;">
+  <a href="keyscriptures.html" class="button">📖 View All Key Scriptures</a>
+</div>
+
+<p></p>
+
+
+  <!-- Parallax Section 2 -->
+  <div class="parallax" style="background-image:url('images/para2.jpg'); --px: 20%; --py: 45%;">
+    <div class="parallax-content">
+      <h2>Corn In The Bible<br>Means Maize</h2>
+      <p>Ancient WRITTEN records of HUNDREDS of Cities, Pyramids and Temples in Mexico, Central America and South America.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>✨ What would it REALLY mean if corn in the Bible meant maize?</h2>
+    <ul>
+      <li><strong>Geography Reversal</strong> — Grain represents God’s blessing and sustenance.</li>
+      <li><strong>History & Civilization Update</strong> — A seed dies to bring forth new life.</li>
+      <li><strong>Theological Consequences</strong> — Gathering grain is a symbol of divine harvest.</li>
+    </ul>
+  </section>
+
+
+
+  <!-- 🔹 Button Link to whatif.html -->
+  <div style="text-align:center; margin:1.5rem 0;">
+    <a href="whatif.html" class="button">🌽 What would it REALLY mean?</a>
+  </div>
+
+
+  <section>
+    <h2>💡 Did You Know?</h2>
+    <div id="factBox">Loading fact...</div>
+  </section>
+
+<!-- 🔹 Featured Books -->
+<section>
+  <h2>📚 Featured Books</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5rem; margin-top:1rem;">
+
+
+
+    <!-- Book 1: Chapter 11 -->
+    <a href="https://amzn.to/4g9XvGZ" target="_blank" style="text-decoration:none; color:inherit; max-width:200px;">
+      <img src="images/book-ch11.jpg" alt="Corn in the Bible: Chapter 11" style="width:100%; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+      <p style="text-align:center; font-weight:bold; margin-top:0.5rem;">Corn in the Bible: Chapter 11</p>
+    </a>
+
+    <!-- Book 2: Chapter 19 -->
+    <a href="https://amzn.to/4gbAF1L" target="_blank" style="text-decoration:none; color:inherit; max-width:200px;">
+      <img src="images/book-ch19.jpg" alt="Corn in the Bible: Chapter 19" style="width:100%; border-radius:6px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+      <p style="text-align:center; font-weight:bold; margin-top:0.5rem;">Corn in the Bible: Chapter 19</p>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- 🔹 Author's Note -->
+<section>
+  <h2>✍️ About the Author</h2>
+  <p style="background:#fff6db; padding:1.5rem; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+    I am Michael Wall <strong>(Get It From Mike)</strong>. Thank you for finding me.  
+    I have always been a scribe. I love to write.  
+    However, it was not until I began to see new and intriguing nuances in ancient, medieval, and modern history  
+    that I changed "writer" to author.  My grammar and style may be outlaw
+
+    From the bottom of my heart, I hope you find what you are looking for in my words.  
+
+  </p>
+</section>
+
+  <footer>
+    &copy; 2025 Corn in the Bible | Educational Resource
+  </footer>
+
+  <script>
+    // Verse explanations
+    function toggleExplanation(el) {
+      const exp = el.querySelector(".explanation");
+      exp.style.display = exp.style.display === "block" ? "none" : "block";
+    }
+
+    // Slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    // Hero text elements
+    const heroTitle = document.getElementById("hero-title");
+    const heroCaption = document.getElementById("hero-caption");
+
+    // Different text for each slide
+    const slideTexts = [
+      {
+        title: "Corn in the Bible",
+        caption: "Discover the true meaning of 'corn' in scripture — the people, places and events of the Bible were in the Americas. The land of corn."
+      },
+      {
+        title: "Joseph’s Storehouses",
+        caption: "Genesis 41 — Joseph gathered the corn of Egypt as the sand of the sea, a symbol of provision and wisdom."
+      },
+      {
+        title: "Ruth’s Harvest",
+        caption: "Ruth gleaned ears of corn in Bethlehem’s fields — an image of grace, humility, and redemption."
+      },
+      {
+        title: "Corn In The Bible Means Maize",
+        caption: "The HUNDREDS of ancient Pyramids and Temples in Mexico, Central America and South America."
+      }
+    ];
+
+    // Show slide + update text
+    function showSlide(n) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === n));
+      heroTitle.textContent = slideTexts[n].title;
+      heroCaption.textContent = slideTexts[n].caption;
+    }
+
+    // Auto-rotate slides
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+
+    // Facts rotator
+    const facts = [
+      "Maize (modern corn) was unknown in the Middle East until after 1492.",
+      "Hebrew word for grain is 'dagan' — often translated as 'corn.'",
+      "Barley was considered food for the poor; wheat was more prestigious.",
+      "Harvest festivals like Pentecost celebrated grain abundance.",
+      "Jesus compared himself to a grain of wheat in John 12:24."
+    ];
+    let i = 0;
+    function showFact() {
+      document.getElementById("factBox").innerText = facts[i];
+      i = (i + 1) % facts.length;
+    }
+    showFact();
+    setInterval(showFact, 4000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corn in the Bible</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #faf7f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* 🔹 Top Banner */
+    .top-banner {
+      width: 100%;
+      overflow: hidden;
+    }
+    .top-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 🔹 Hero Slideshow */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      padding: 1rem;
+      width: 90%;
+      max-width: 700px;
+    }
+    .hero-box {
+      background: rgba(120,120,120,0.45); /* medium-light grey with soft transparency */
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35); 
+      color: #fff;
+    }
+    .hero-box h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .hero-box p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin: 0;
+    }
+
+    /* 🔹 Content Sections */
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #7a5200;
+      border-bottom: 2px solid #e6d8a3;
+      padding-bottom: 0.3rem;
+    }
+    .verse {
+      background: #fff6db;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .verse:hover {
+      background: #ffeebc;
+    }
+    .explanation {
+      display: none;
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #444;
+    }
+    #factBox {
+      background: #e8f8f5;
+      border-left: 5px solid #1abc9c;
+      padding: 1rem;
+      margin-top: 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* 🔹 Parallax Sections (with focal-point controls) */
+    .parallax {
+      position: relative;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      /* Focal point controls */
+      --px: 50%; /* horizontal focus: 0% left, 50% center, 100% right */
+      --py: 50%; /* vertical focus:   0% top,  50% center, 100% bottom */
+      --tint: 0.45; /* overlay darkness 0–1 */
+
+      background-position: var(--px) var(--py);
+
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .parallax::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,var(--tint));
+    }
+    .parallax-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 800px;
+    }
+.parallax-content h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem); /* larger headline */
+  margin-bottom: 1.2rem;
+  border: none;
+  color: #fff;
+}
+
+.parallax-content p {
+  font-size: clamp(1.2rem, 3vw, 1.8rem); /* larger paragraph text */
+  line-height: 1.6;
+}
+
+
+    /* 🔹 Footer */
+    footer {
+      background: #333;
+      color: #eee;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .parallax { background-attachment: scroll; --px: 50%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 Top Banner -->
+  <div class="top-banner">
+    <img src="images/corninthebiblebanner.jpg" alt="Corn in the Bible Banner">
+  </div>
+
+  <!-- 🔹 Hero Slideshow -->
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('images/slide1.jpg');"></div>
+    <div class="slide" style="background-image: url('images/slide2.jpg');"></div>
+    <div class="slide" style="background-image: url('images/slide3.jpg');"></div>
+    <div class="slide" style="background-image: url('images/slide4.jpg');"></div>
+
+    <div class="hero-text">
+      <div class="hero-box">
+        <h1 id="hero-title">Corn in the Bible</h1>
+        <p id="hero-caption">Discover the true meaning of "corn" in scripture — not maize, but grain: wheat, barley, and the staff of life.</p>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>🌾 Meaning & History</h2>
+    <p>In the King James Bible and other old translations, "corn" does not mean American maize. 
+    The word comes from Old English <em>corn</em>, meaning <strong>grain</strong> in general. 
+    In the ancient world of the Bible, this meant mainly wheat and barley.</p>
+  </section>
+
+  <!-- Parallax Section 1 -->
+  <div class="parallax" style="background-image:url('images/para1.jpg'); --px: 30%; --py: 50%;">
+    <div class="parallax-content">
+      <h2>“Seven Ears of Corn”</h2>
+      <p>Genesis 41:5 – And he slept and dreamed the second time: and, behold, seven ears of <strong>corn</strong> came up upon one stalk, rank and good..</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>📖 Key Scriptures</h2>
+    <div class="verse" onclick="toggleExplanation(this)">
+      Genesis 41:35 — Joseph stores up “corn” in Egypt.
+      <div class="explanation">Here "corn" means stored grain, probably wheat or barley.</div>
+    </div>
+    <div class="verse" onclick="toggleExplanation(this)">
+      Ruth 2:2 — Ruth goes to glean ears of “corn.”
+      <div class="explanation">This refers to gleaning stalks of barley or wheat during harvest.</div>
+    </div>
+    <div class="verse" onclick="toggleExplanation(this)">
+      John 12:24 — “Except a corn of wheat fall into the ground and die...”
+      <div class="explanation">Jesus uses the grain of wheat as a metaphor for death and resurrection.</div>
+    </div>
+  </section>
+
+<div style="text-align:center; margin-top:1.5rem;">
+  <a href="keyscriptures.html" 
+     style="background:#7a5200; color:#fff; padding:0.8rem 1.5rem; border-radius:6px; text-decoration:none; font-weight:bold; display:inline-block;">
+    📖 View All Key Scriptures
+  </a>
+</div>
+
+
+  <!-- Parallax Section 2 -->
+  <div class="parallax" style="background-image:url('images/para2.jpg'); --px: 20%; --py: 45%;">
+    <div class="parallax-content">
+      <h2>Symbolism of Corn</h2>
+      <p>From harvest blessings to resurrection imagery, corn in the Bible reflects both physical sustenance and spiritual truth.</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>✨ Symbolism</h2>
+    <ul>
+      <li><strong>Abundance & Provision</strong> — Grain represents God’s blessing and sustenance.</li>
+      <li><strong>Resurrection & Renewal</strong> — A seed dies to bring forth new life.</li>
+      <li><strong>Harvest & Judgment</strong> — Gathering grain is a symbol of divine harvest.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>💡 Did You Know?</h2>
+    <div id="factBox">Loading fact...</div>
+  </section>
+
+  <footer>
+    &copy; 2025 Corn in the Bible | Educational Resource
+  </footer>
+
+  <script>
+    // Verse explanations
+    function toggleExplanation(el) {
+      const exp = el.querySelector(".explanation");
+      exp.style.display = exp.style.display === "block" ? "none" : "block";
+    }
+
+    // Slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    // Hero text elements
+    const heroTitle = document.getElementById("hero-title");
+    const heroCaption = document.getElementById("hero-caption");
+
+    // Different text for each slide
+    const slideTexts = [
+      {
+        title: "Corn in the Bible",
+        caption: "Discover the true meaning of 'corn' in scripture — not maize, but grain: wheat, barley, and the staff of life."
+      },
+      {
+        title: "Joseph’s Storehouses",
+        caption: "Genesis 41 — Joseph gathered the corn of Egypt as the sand of the sea, a symbol of provision and wisdom."
+      },
+      {
+        title: "Ruth’s Harvest",
+        caption: "Ruth gleaned ears of corn in Bethlehem’s fields — an image of grace, humility, and redemption."
+      },
+      {
+        title: "A Grain of Wheat",
+        caption: "John 12:24 — Except a corn of wheat fall into the ground and die, it abides alone; but if it dies, it brings forth much fruit."
+      }
+    ];
+
+    // Show slide + update text
+    function showSlide(n) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === n));
+      heroTitle.textContent = slideTexts[n].title;
+      heroCaption.textContent = slideTexts[n].caption;
+    }
+
+    // Auto-rotate slides
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+
+    // Facts rotator
+    const facts = [
+      "Maize (modern corn) was unknown in the Middle East until after 1492.",
+      "Hebrew word for grain is 'dagan' — often translated as 'corn.'",
+      "Barley was considered food for the poor; wheat was more prestigious.",
+      "Harvest festivals like Pentecost celebrated grain abundance.",
+      "Jesus compared himself to a grain of wheat in John 12:24."
+    ];
+    let i = 0;
+    function showFact() {
+      document.getElementById("factBox").innerText = facts[i];
+      i = (i + 1) % facts.length;
+    }
+    showFact();
+    setInterval(showFact, 4000);
+  </script>
+</body>
+</html>
+
+
+
+

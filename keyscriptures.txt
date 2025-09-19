@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Corn in the Bible — Key Scriptures</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #faf7f0;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* 🔹 Top Banner */
+    .top-banner {
+      width: 100%;
+      overflow: hidden;
+    }
+    .top-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* 🔹 Hero Slideshow */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      padding: 1rem;
+      width: 90%;
+      max-width: 700px;
+    }
+    .hero-box {
+      background: rgba(120,120,120,0.45);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.35); 
+      color: #fff;
+    }
+    .hero-box h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 1rem;
+    }
+    .hero-box p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin: 0;
+    }
+
+    /* 🔹 Content Sections */
+    section {
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #7a5200;
+      border-bottom: 2px solid #e6d8a3;
+      padding-bottom: 0.3rem;
+    }
+    h1.division {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      color: #5a3700;
+      border-bottom: 3px solid #d4b85d;
+      padding-bottom: 0.5rem;
+    }
+    .verse {
+      background: #fff6db;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .verse:hover {
+      background: #ffeebc;
+    }
+    .explanation {
+      display: none;
+      margin-top: 0.5rem;
+      font-style: italic;
+      color: #444;
+    }
+
+    /* 🔹 Footer */
+    footer {
+      background: #333;
+      color: #eee;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 Top Banner -->
+  <div class="top-banner">
+    <img src="images/corninthebiblebanner.jpg" alt="Corn in the Bible Banner">
+  </div>
+
+  <!-- 🔹 Hero Slideshow -->
+  <div class="slideshow">
+    <div class="slide active" style="background-image: url('images/keyslide1.jpg');"></div>
+    <div class="slide" style="background-image: url('images/keyslide2.jpg');"></div>
+    <div class="slide" style="background-image: url('images/keyslide3.jpg');"></div>
+    <div class="slide" style="background-image: url('images/keyslide4.jpg');"></div>
+
+    <div class="hero-text">
+      <div class="hero-box">
+        <h1 id="hero-title">Key Scriptures</h1>
+        <p id="hero-caption">Explore all the passages where "corn" appears in the Bible.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🔹 Old Testament -->
+  <h1 class="division">📜 Old Testament</h1>
+
+  <!-- ✅ Genesis through Zechariah go here -->
+  <!-- (Insert all the OT <section> blocks you already built: Genesis → Zechariah) -->
+
+
+  <!-- 🔹 Scripture Library -->
+  <section>
+    <h2>🌾 Genesis</h2>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 27:28 — Therefore God give thee of the dew of heaven, and the fatness of the earth, and plenty of corn and wine:<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 27:37 — And Isaac answered and said unto Esau, Behold, I have made him thy lord, and all his brethren have I given to him for servants; and with corn and wine have I sustained him: and what shall I do now unto thee, my son?<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 41:5 — And he slept and dreamed the second time: and, behold, seven ears of corn came up upon one stalk, rank and good.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 41:35 — And let them gather all the food of those good years that come, and lay up corn under the hand of Pharaoh, and let them keep food in the cities.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 41:49 — And Joseph gathered corn as the sand of the sea, very much, until he left numbering; for it was without number.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 41:57 — And all countries came into Egypt to Joseph for to buy corn; because that the famine was so sore in all lands.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:1 — Now when Jacob saw that there was corn in Egypt, Jacob said unto his sons, Why do ye look one upon another?<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:2 — And he said, Behold, I have heard that there is corn in Egypt: get you down thither, and buy for us from thence; that we may live, and not die.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:3 — And Joseph’s ten brethren went down to buy corn in Egypt.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:5 — And the sons of Israel came to buy corn among those that came: for the famine was in the land of Canaan.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:19 — If ye be true men, let one of your brethren be bound in the house of your prison: go ye, carry corn for the famine of your houses:<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:25 — Then Joseph commanded to fill their sacks with corn, and to restore every man’s money into his sack, and to give them provision for the way: and thus did he unto them.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 42:26 — And they laded their asses with the corn, and departed thence.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 43:2 — And it came to pass, when they had eaten up the corn which they had brought out of Egypt, their father said unto them, Go again, buy us a little food.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 44:2 — And put my cup, the silver cup, in the sack’s mouth of the youngest, and his corn money. And he did according to the word that Joseph had spoken.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 45:23 — And to his father he sent after this manner; ten asses laden with the good things of Egypt, and ten she asses laden with corn and bread and meat for his father by the way.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Genesis 47:14 — And Joseph gathered up all the money that was found in the land of Egypt, and in the land of Canaan, for the corn which they bought: and Joseph brought the money into Pharaoh’s house.<div class="explanation"></div></div>
+  </section>
+
+  <section>
+    <h2>🌾 Exodus</h2>
+    <div class="verse" onclick="toggleExplanation(this)">
+      Exodus 22:6 — If fire break out, and catch in thorns, so that the stacks of corn, or the standing corn, or the field, be consumed therewith; he that kindled the fire shall surely make restitution.
+      <div class="explanation"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🌾 Leviticus</h2>
+    <div class="verse" onclick="toggleExplanation(this)">Leviticus 2:14 — And if thou offer a meat offering of thy firstfruits unto the LORD, thou shalt offer for the meat offering of thy firstfruits green ears of corn dried by the fire, even corn beaten out of full ears.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Leviticus 2:16 — And the priest shall burn the memorial of it, part of the beaten corn thereof, and part of the oil thereof, with all the frankincense thereof: it is an offering made by fire unto the LORD.<div class="explanation"></div></div>
+    <div class="verse" onclick="toggleExplanation(this)">Leviticus 23:14 — And ye shall eat neither bread, nor parched corn, nor green ears, until the selfsame day that ye have brought an offering unto your God: it shall be a statute for ever throughout your generations in all your dwellings.<div class="explanation"></div></div>
+  </section>
+
+  <section>
+    <h2>🌾 Numbers</h2>
+    <div class="verse" onclick="toggleExplanation(this)">Numbers 18:27 — And this your heave offering shall be reckoned unto you, as though it were the corn of the threshingfloor, and as the fulness of the winepress.<div class="explanation"></div></div>
+  </section>
+
+<section>
+  <h2>🌾 Deuteronomy</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 7:13 — And he will love thee, and bless thee, and multiply thee: he will also bless the fruit of thy womb, and the fruit of thy land, thy corn, and thy wine, and thine oil, the increase of thy kine, and the flocks of thy sheep, in the land which he sware unto thy fathers to give thee.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 11:14 — That I will give you the rain of your land in his due season, the first rain and the latter rain, that thou mayest gather in thy corn, and thy wine, and thine oil.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 12:17 — Thou mayest not eat within thy gates the tithe of thy corn, or of thy wine, or of thy oil, or the firstlings of thy herds or of thy flock, nor any of thy vows which thou vowest, nor thy freewill offerings, or heave offering of thine hand:<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 14:23 — And thou shalt eat before the LORD thy God, in the place which he shall choose to place his name there, the tithe of thy corn, of thy wine, and of thine oil, and the firstlings of thy herds and of thy flocks; that thou mayest learn to fear the LORD thy God always.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 16:9 — Seven weeks shalt thou number unto thee: begin to number the seven weeks from such time as thou beginnest to put the sickle to the corn.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 16:13 — Thou shalt observe the feast of tabernacles seven days, after that thou hast gathered in thy corn and thy wine:<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 18:4 — The firstfruit also of thy corn, of thy wine, and of thine oil, and the first of the fleece of thy sheep, shalt thou give him.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 23:25 — When thou comest into the standing corn of thy neighbour, then thou mayest pluck the ears with thine hand; but thou shalt not move a sickle unto thy neighbour’s standing corn.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 25:4 — Thou shalt not muzzle the ox when he treadeth out the corn.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 28:51 — And he shall eat the fruit of thy cattle, and the fruit of thy land, until thou be destroyed: which also shall not leave thee either corn, wine, or oil, or the increase of thy kine, or flocks of thy sheep, until he have destroyed thee.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Deuteronomy 33:28 — Israel then shall dwell in safety alone: the fountain of Jacob shall be upon a land of corn and wine; also his heavens shall drop down dew.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Joshua</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Joshua 5:11 — And they did eat of the old corn of the land on the morrow after the passover, unleavened cakes, and parched corn in the selfsame day.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Joshua 5:12 — And the manna ceased on the morrow after they had eaten of the old corn of the land; neither had the children of Israel manna any more; but they did eat of the fruit of the land of Canaan that year.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Judges</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Judges 15:5 — And when he had set the brands on fire, he let them go into the standing corn of the Philistines, and burnt up both the shocks, and also the standing corn, with the vineyards and olives.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Ruth</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Ruth 2:2 — And Ruth the Moabitess said unto Naomi, Let me now go to the field, and glean ears of corn after him in whose sight I shall find grace. And she said unto her, Go, my daughter.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Ruth 2:14 — And Boaz said unto her, At mealtime come thou hither, and eat of the bread, and dip thy morsel in the vinegar. And she sat beside the reapers: and he reached her parched corn, and she did eat, and was sufficed, and left.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Ruth 3:7 — And when Boaz had eaten and drunk, and his heart was merry, he went to lie down at the end of the heap of corn: and she came softly, and uncovered his feet, and laid her down.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 1 Samuel</h2>
+  <div class="verse" onclick="toggleExplanation(this)">1 Samuel 17:17 — And Jesse said unto David his son, Take now for thy brethren an ephah of this parched corn, and these ten loaves, and run to the camp to thy brethren;<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">1 Samuel 25:18 — Then Abigail made haste, and took two hundred loaves, and two bottles of wine, and five sheep ready dressed, and five measures of parched corn, and an hundred clusters of raisins, and two hundred cakes of figs, and laid them on asses.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 2 Samuel</h2>
+  <div class="verse" onclick="toggleExplanation(this)">2 Samuel 17:19 — And the woman took and spread a covering over the well’s mouth, and spread ground corn thereon; and the thing was not known.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">2 Samuel 17:28 — Brought beds, and basins, and earthen vessels, and wheat, and barley, and flour, and parched corn, and beans, and lentiles, and parched pulse,<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 2 Kings</h2>
+  <div class="verse" onclick="toggleExplanation(this)">2 Kings 4:42 — And there came a man from Baalshalisha, and brought the man of God bread of the firstfruits, twenty loaves of barley, and full ears of corn in the husk thereof. And he said, Give unto the people, that they may eat.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">2 Kings 18:32 — Until I come and take you away to a land like your own land, a land of corn and wine, a land of bread and vineyards, a land of oil olive and of honey, that ye may live, and not die: and hearken not unto Hezekiah, when he persuadeth you, saying, The LORD will deliver us.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">2 Kings 19:26 — Therefore their inhabitants were of small power, they were dismayed and confounded; they were as the grass of the field, and as the green herb, as the grass on the housetops, and as corn blasted before it be grown up.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 2 Chronicles</h2>
+  <div class="verse" onclick="toggleExplanation(this)">2 Chronicles 31:5 — And as soon as the commandment came abroad, the children of Israel brought in abundance the firstfruits of corn, wine, and oil, and honey, and of all the increase of the field; and the tithe of all things brought they in abundantly.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">2 Chronicles 32:28 — Storehouses also for the increase of corn, and wine, and oil; and stalls for all manner of beasts, and cotes for flocks.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Nehemiah</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 5:2 — For there were that said, We, our sons, and our daughters, are many: therefore we take up corn for them, that we may eat, and live.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 5:3 — Some also there were that said, We have mortgaged our lands, vineyards, and houses, that we might buy corn, because of the dearth.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 5:10 — I likewise, and my brethren, and my servants, might exact of them money and corn: I pray you, let us leave off this usury.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 5:11 — Restore, I pray you, to them, even this day, their lands, their vineyards, their oliveyards, and their houses, also the hundredth part of the money, and of the corn, the wine, and the oil, that ye exact of them.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 10:39 — For the children of Israel and the children of Levi shall bring the offering of the corn, of the new wine, and the oil, unto the chambers, where are the vessels of the sanctuary, and the priests that minister, and the porters, and the singers: and we will not forsake the house of our God.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 13:5 — And he had prepared for him a great chamber, where aforetime they laid the meat offerings, the frankincense, and the vessels, and the tithes of the corn, the new wine, and the oil, which was commanded to be given to the Levites, and the singers, and the porters; and the offerings of the priests.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Nehemiah 13:12 — Then brought all Judah the tithe of the corn and the new wine and the oil unto the treasuries.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Job</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Job 5:26 — Thou shalt come to thy grave in a full age, like as a shock of corn cometh in in his season.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Job 24:6 — They reap every one his corn in the field: and they gather the vintage of the wicked.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Job 24:24 — They are exalted for a little while, but are gone and brought low; they are taken out of the way as all other, and cut off as the tops of the ears of corn.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Job 39:4 — Their young ones are in good liking, they grow up with corn; they go forth, and return not unto them.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Psalms</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Psalm 4:7 — Thou hast put gladness in my heart, more than in the time that their corn and their wine increased.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Psalm 65:9 — Thou visitest the earth, and waterest it: thou greatly enrichest it with the river of God, which is full of water: thou preparest them corn, when thou hast so provided for it.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Psalm 65:13 — The pastures are clothed with flocks; the valleys also are covered over with corn; they shout for joy, they also sing.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Psalm 72:16 — There shall be an handful of corn in the earth upon the top of the mountains; the fruit thereof shall shake like Lebanon: and they of the city shall flourish like grass of the earth.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Psalm 78:24 — And had rained down manna upon them to eat, and had given them of the corn of heaven.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Proverbs</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Proverbs 11:26 — He that withholdeth corn, the people shall curse him: but blessing shall be upon the head of him that selleth it.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Isaiah</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Isaiah 17:5 — And it shall be as when the harvestman gathereth the corn, and reapeth the ears with his arm; and it shall be as he that gathereth ears in the valley of Rephaim.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Isaiah 21:10 — O my threshing, and the corn of my floor: that which I have heard of the LORD of hosts, the God of Israel, have I declared unto you.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Isaiah 28:28 — Bread corn is bruised; because he will not ever be threshing it, nor break it with the wheel of his cart, nor bruise it with his horsemen.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Isaiah 36:17 — Until I come and take you away to a land like your own land, a land of corn and wine, a land of bread and vineyards.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Isaiah 37:27 — Therefore their inhabitants were of small power, they were dismayed and confounded; they were as the grass of the field, and as the green herb, as the grass on the housetops, and as corn blasted before it be grown up.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Isaiah 62:8 — The LORD hath sworn by his right hand, and by the arm of his strength, Surely I will no more give thy corn to be meat for thine enemies; and the sons of the stranger shall not drink thy wine, for the which thou hast laboured:<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Lamentations</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Lamentations 2:12 — They say to their mothers, Where is corn and wine? when they swooned as the wounded in the streets of the city, when their soul was poured out into their mothers' bosom.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Ezekiel</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Ezekiel 36:29 — I will also save you from all your uncleannesses: and I will call for the corn, and will increase it, and lay no famine upon you.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Hosea</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Hosea 2:8 — For she did not know that I gave her corn, and wine, and oil, and multiplied her silver and gold, which they prepared for Baal.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Hosea 2:9 — Therefore will I return, and take away my corn in the time thereof, and my wine in the season thereof, and will recover my wool and my flax given to cover her nakedness.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Hosea 2:22 — And the earth shall hear the corn, and the wine, and the oil; and they shall hear Jezreel.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Hosea 7:14 — And they have not cried unto me with their heart, when they howled upon their beds: they assemble themselves for corn and wine, and they rebel against me.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Hosea 10:11 — And Ephraim is as an heifer that is taught, and loveth to tread out the corn; but I passed over upon her fair neck: I will make Ephraim to ride; Judah shall plow, and Jacob shall break his clods.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Hosea 14:7 — They that dwell under his shadow shall return; they shall revive as the corn, and grow as the vine: the scent thereof shall be as the wine of Lebanon.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Joel</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Joel 1:10 — The field is wasted, the land mourneth; for the corn is wasted: the new wine is dried up, the oil languisheth.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Joel 1:17 — The seed is rotten under their clods, the garners are laid desolate, the barns are broken down; for the corn is withered.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Joel 2:19 — Yea, the LORD will answer and say unto his people, Behold, I will send you corn, and wine, and oil, and ye shall be satisfied therewith: and I will no more make you a reproach among the heathen.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Amos</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Amos 8:5 — Saying, When will the new moon be gone, that we may sell corn? and the sabbath, that we may set forth wheat, making the ephah small, and the shekel great, and falsifying the balances by deceit?<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Amos 9:9 — For, lo, I will command, and I will sift the house of Israel among all nations, like as corn is sifted in a sieve, yet shall not the least grain fall upon the earth.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Haggai</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Haggai 1:11 — And I called for a drought upon the land, and upon the mountains, and upon the corn, and upon the new wine, and upon the oil, and upon that which the ground bringeth forth, and upon men, and upon cattle, and upon all the labour of the hands.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Zechariah</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Zechariah 9:17 — For how great is his goodness, and how great is his beauty! corn shall make the young men cheerful, and new wine the maids.<div class="explanation"></div></div>
+</section>
+
+
+
+
+  <!-- 🔹 New Testament -->
+  <h1 class="division">🕊️ New Testament</h1>
+
+  <!-- ✅ Matthew through 1 Timothy go here -->
+  <!-- (Insert all the NT <section> blocks you already built: Matthew → 1 Timothy) -->
+
+
+<section>
+  <h2>🌾 Matthew</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Matthew 12:1 — At that time Jesus went on the sabbath day through the corn; and his disciples were an hungred, and began to pluck the ears of corn, and to eat.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Mark</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Mark 2:23 — And it came to pass, that he went through the corn fields on the sabbath day; and his disciples began, as they went, to pluck the ears of corn.<div class="explanation"></div></div>
+  <div class="verse" onclick="toggleExplanation(this)">Mark 4:28 — For the earth bringeth forth fruit of herself; first the blade, then the ear, after that the full corn in the ear.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Luke</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Luke 6:1 — And it came to pass on the second sabbath after the first, that he went through the corn fields; and his disciples plucked the ears of corn, and did eat, rubbing them in their hands.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 John</h2>
+  <div class="verse" onclick="toggleExplanation(this)">John 12:24 — Verily, verily, I say unto you, Except a corn of wheat fall into the ground and die, it abideth alone: but if it die, it bringeth forth much fruit.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 Acts</h2>
+  <div class="verse" onclick="toggleExplanation(this)">Acts 7:12 — But when Jacob heard that there was corn in Egypt, he sent out our fathers first.<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 1 Corinthians</h2>
+  <div class="verse" onclick="toggleExplanation(this)">1 Corinthians 9:9 — For it is written in the law of Moses, Thou shalt not muzzle the mouth of the ox that treadeth out the corn. Doth God take care for oxen?<div class="explanation"></div></div>
+</section>
+
+<section>
+  <h2>🌾 1 Timothy</h2>
+  <div class="verse" onclick="toggleExplanation(this)">1 Timothy 5:18 — For the scripture saith, Thou shalt not muzzle the ox that treadeth out the corn. And, The labourer is worthy of his reward.<div class="explanation"></div></div>
+</section>
+
+
+
+
+  <footer>
+    &copy; 2025 Corn in the Bible | Key Scriptures
+  </footer>
+
+  <script>
+    // Verse explanations toggle
+    function toggleExplanation(el) {
+      const exp = el.querySelector(".explanation");
+      exp.style.display = exp.style.display === "block" ? "none" : "block";
+    }
+
+    // Slideshow rotation
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function showSlide(n) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === n));
+    }
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 5000);
+  </script>
+</body>
+</html>
+
